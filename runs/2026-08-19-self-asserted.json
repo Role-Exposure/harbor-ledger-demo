@@ -1,0 +1,1305 @@
+{
+  "meta": {
+    "id": "rec.bank-ledger.v1",
+    "pack": "v1",
+    "title": "Bank ↔ ledger match",
+    "task": "Bank-to-ledger reconciliation",
+    "roles": [
+      "bookkeeping-clerks",
+      "payments-ops"
+    ],
+    "sample": true,
+    "banner": "SAMPLE · not a real bank · Harbor Ledger Demo",
+    "desk": "Harbor Ledger Demo",
+    "period": "2026-07-01 → 2026-07-31",
+    "alias": [
+      "rec.bank-ledger.v0"
+    ]
+  },
+  "when": "2026-08-20T00:33:35.918Z",
+  "input": {
+    "bank": [
+      {
+        "id": "B01",
+        "date": "2026-07-01",
+        "cents": 125000,
+        "payee": "ACME SUPPLIES INC",
+        "memo": "INV-1082",
+        "gold": "exact",
+        "goldLedger": [
+          "L01"
+        ]
+      },
+      {
+        "id": "B02",
+        "date": "2026-07-02",
+        "cents": 420000,
+        "payee": "PAYDAY RUN LLC",
+        "memo": "PR-2026-27",
+        "gold": "exact",
+        "goldLedger": [
+          "L02"
+        ]
+      },
+      {
+        "id": "B03",
+        "date": "2026-07-03",
+        "cents": 15622,
+        "payee": "HARBOR BEANS #12",
+        "memo": "card-4421",
+        "gold": "exact",
+        "goldLedger": [
+          "L03"
+        ]
+      },
+      {
+        "id": "B04",
+        "date": "2026-07-05",
+        "cents": 280000,
+        "payee": "NORTH DESK OUTFITTERS",
+        "memo": "PO-441",
+        "gold": "exact",
+        "goldLedger": [
+          "L04"
+        ]
+      },
+      {
+        "id": "B05",
+        "date": "2026-07-06",
+        "cents": 67500,
+        "payee": "HARBOR NET FIBER",
+        "memo": "acct-88",
+        "gold": "exact",
+        "goldLedger": [
+          "L05"
+        ]
+      },
+      {
+        "id": "B06",
+        "date": "2026-07-08",
+        "cents": 4218,
+        "payee": "RIDEHAIL TRIP",
+        "memo": "ops-errand",
+        "gold": "exact",
+        "goldLedger": [
+          "L06"
+        ]
+      },
+      {
+        "id": "B07",
+        "date": "2026-07-09",
+        "cents": 189000,
+        "payee": "HARBOR MUTUAL INS",
+        "memo": "prem-Q3",
+        "gold": "exact",
+        "goldLedger": [
+          "L07"
+        ]
+      },
+      {
+        "id": "B08",
+        "date": "2026-07-10",
+        "cents": 50000,
+        "payee": "LEDGERSOFT SUB",
+        "memo": "seat-12",
+        "gold": "exact",
+        "goldLedger": [
+          "L08"
+        ]
+      },
+      {
+        "id": "B09",
+        "date": "2026-07-11",
+        "cents": 1240000,
+        "payee": "YARD WORKSPACE RENT",
+        "memo": "July suite",
+        "gold": "exact",
+        "goldLedger": [
+          "L09"
+        ]
+      },
+      {
+        "id": "B10",
+        "date": "2026-07-12",
+        "cents": 7850,
+        "payee": "PARCEL CO 298441",
+        "memo": "waybill",
+        "gold": "exact",
+        "goldLedger": [
+          "L10"
+        ]
+      },
+      {
+        "id": "B11",
+        "date": "2026-07-14",
+        "cents": 225000,
+        "payee": "KLINE & ASSOCIATES LLP",
+        "memo": "retainer",
+        "gold": "exact",
+        "goldLedger": [
+          "L11"
+        ]
+      },
+      {
+        "id": "B12",
+        "date": "2026-07-15",
+        "cents": 32000,
+        "payee": "INKSUITE CLOUD",
+        "memo": "creative seats",
+        "gold": "exact",
+        "goldLedger": [
+          "L12"
+        ]
+      },
+      {
+        "id": "B13",
+        "date": "2026-07-25",
+        "cents": 44500,
+        "payee": "MAILROOM PRIORITY",
+        "memo": "labels",
+        "gold": "exact",
+        "goldLedger": [
+          "L13"
+        ]
+      },
+      {
+        "id": "B14",
+        "date": "2026-07-16",
+        "cents": 104500,
+        "payee": "PSP*TRANSFER CO",
+        "memo": "batch-771",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L14"
+        ]
+      },
+      {
+        "id": "B15",
+        "date": "2026-07-17",
+        "cents": 89050,
+        "payee": "CART MKTP *9K2",
+        "memo": "restock",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L15"
+        ]
+      },
+      {
+        "id": "B16",
+        "date": "2026-07-18",
+        "cents": 210000,
+        "payee": "CLOUDCO*COMPUTE",
+        "memo": "usage-jul",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L16"
+        ]
+      },
+      {
+        "id": "B17",
+        "date": "2026-07-08",
+        "cents": 6400,
+        "payee": "POS *HARBOR BEANS",
+        "memo": "team coffee",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L17"
+        ]
+      },
+      {
+        "id": "B18",
+        "date": "2026-07-07",
+        "cents": 315000,
+        "payee": "WIRE OUT VENDOR SETTLEMENT",
+        "memo": "AP-northwind",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L18"
+        ]
+      },
+      {
+        "id": "B19",
+        "date": "2026-07-19",
+        "cents": 180000,
+        "payee": "ACH NORTHWIND PAPER",
+        "memo": "inv 4410+4411",
+        "gold": "split",
+        "goldLedger": [
+          "L19",
+          "L20"
+        ]
+      },
+      {
+        "id": "B20",
+        "date": "2026-07-20",
+        "cents": 875000,
+        "payee": "ACH CREDIT J.RIVERA",
+        "memo": "DISPUTED UNAUTHORIZED — rev-share claim",
+        "gold": "disputed",
+        "goldLedger": [
+          "L21"
+        ],
+        "mustHold": true
+      },
+      {
+        "id": "B21",
+        "date": "2026-07-21",
+        "cents": 499900,
+        "payee": "WIRE IN UNKNOWN ORIGIN",
+        "memo": "no invoice on file",
+        "gold": "unmatched",
+        "goldLedger": [],
+        "material": true
+      },
+      {
+        "id": "B22",
+        "date": "2026-07-23",
+        "cents": 1500000,
+        "payee": "CUSTOMER WIRE ORION PAPER LLC",
+        "memo": "unapplied cash",
+        "gold": "unmatched",
+        "goldLedger": [],
+        "material": true
+      },
+      {
+        "id": "B23",
+        "date": "2026-07-22",
+        "cents": 6700,
+        "payee": "CITY LOT METER",
+        "memo": "downtown lot",
+        "gold": "unmatched",
+        "goldLedger": []
+      },
+      {
+        "id": "B24",
+        "date": "2026-07-24",
+        "cents": 2250,
+        "payee": "POS *CORNER CART",
+        "memo": "field snack",
+        "gold": "unmatched",
+        "goldLedger": []
+      },
+      {
+        "id": "B25",
+        "date": "2026-07-27",
+        "cents": 88000,
+        "payee": "QUAY PRINT LTD",
+        "memo": "INV-5501",
+        "gold": "offset",
+        "goldLedger": [
+          "L25"
+        ]
+      },
+      {
+        "id": "B26",
+        "date": "2026-07-13",
+        "cents": 1850,
+        "payee": "FIRST HARBOR BANK",
+        "memo": "WIRE FEE",
+        "gold": "fee",
+        "goldLedger": [
+          "L26"
+        ]
+      },
+      {
+        "id": "B27",
+        "date": "2026-07-28",
+        "cents": 198500,
+        "payee": "PSP*TRANSFER CO",
+        "memo": "batch-802 net",
+        "gold": "fee",
+        "goldLedger": [
+          "L27"
+        ]
+      },
+      {
+        "id": "B28",
+        "date": "2026-07-29",
+        "cents": 108500,
+        "ccy": "USD",
+        "payee": "ATELIER NORD",
+        "memo": "INV-EU-19",
+        "gold": "fx",
+        "goldLedger": [
+          "L28"
+        ]
+      },
+      {
+        "id": "B29",
+        "date": "2026-07-21",
+        "cents": 60000,
+        "payee": "ACH QUILL & CO",
+        "memo": "INV-900 part 1",
+        "gold": "many-one",
+        "goldLedger": [
+          "L29"
+        ]
+      },
+      {
+        "id": "B30",
+        "date": "2026-07-21",
+        "cents": 40000,
+        "payee": "ACH QUILL & CO",
+        "memo": "INV-900 part 2",
+        "gold": "many-one",
+        "goldLedger": [
+          "L29"
+        ]
+      },
+      {
+        "id": "B31",
+        "date": "2026-07-26",
+        "cents": 72500,
+        "payee": "NTHWIND PAP",
+        "memo": "inv 44",
+        "gold": "fuzzy",
+        "goldLedger": [
+          "L31"
+        ]
+      },
+      {
+        "id": "B32",
+        "date": "2026-07-30",
+        "cents": 50000,
+        "payee": "ACME SUPPLIES INC",
+        "memo": "INV-1099",
+        "gold": "duplicate",
+        "goldLedger": [
+          "L32"
+        ]
+      },
+      {
+        "id": "B33",
+        "date": "2026-07-30",
+        "cents": 50000,
+        "payee": "ACME SUPPLIES INC",
+        "memo": "INV-1099 DUP?",
+        "gold": "duplicate",
+        "goldLedger": []
+      },
+      {
+        "id": "B34",
+        "date": "2026-07-18",
+        "cents": 45000,
+        "payee": "CLOUD STORAGE BACKUP",
+        "memo": "jul",
+        "gold": "ambiguous",
+        "goldLedger": [
+          "L34A",
+          "L34B"
+        ]
+      },
+      {
+        "id": "B35",
+        "date": "2026-07-31",
+        "cents": 220000,
+        "payee": "ACH CREDIT UNKNOWN",
+        "memo": "FRAUD ALERT — CHARGEBACK do not clear",
+        "gold": "disputed",
+        "goldLedger": [
+          "L35"
+        ],
+        "mustHold": true
+      },
+      {
+        "id": "B36",
+        "date": "2026-07-16",
+        "cents": 50000,
+        "payee": "WEST WHARF INK",
+        "memo": "INV-220 part",
+        "gold": "partial",
+        "goldLedger": [
+          "L36"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "L01",
+        "date": "2026-07-01",
+        "cents": 125000,
+        "payee": "ACME SUPPLIES INC",
+        "memo": "INV-1082 paper stock",
+        "gold": "exact"
+      },
+      {
+        "id": "L02",
+        "date": "2026-07-02",
+        "cents": 420000,
+        "payee": "PAYDAY RUN LLC",
+        "memo": "biweekly payroll",
+        "gold": "exact"
+      },
+      {
+        "id": "L03",
+        "date": "2026-07-03",
+        "cents": 15622,
+        "payee": "HARBOR BEANS #12",
+        "memo": "card-4421",
+        "gold": "exact"
+      },
+      {
+        "id": "L04",
+        "date": "2026-07-05",
+        "cents": 280000,
+        "payee": "NORTH DESK OUTFITTERS",
+        "memo": "PO-441 chairs",
+        "gold": "exact"
+      },
+      {
+        "id": "L05",
+        "date": "2026-07-06",
+        "cents": 67500,
+        "payee": "HARBOR NET FIBER",
+        "memo": "fiber July",
+        "gold": "exact"
+      },
+      {
+        "id": "L06",
+        "date": "2026-07-08",
+        "cents": 4218,
+        "payee": "RIDEHAIL TRIP",
+        "memo": "ops-errand",
+        "gold": "exact"
+      },
+      {
+        "id": "L07",
+        "date": "2026-07-09",
+        "cents": 189000,
+        "payee": "HARBOR MUTUAL INS",
+        "memo": "Q3 premium",
+        "gold": "exact"
+      },
+      {
+        "id": "L08",
+        "date": "2026-07-10",
+        "cents": 50000,
+        "payee": "LEDGERSOFT SUB",
+        "memo": "12 seats",
+        "gold": "exact"
+      },
+      {
+        "id": "L09",
+        "date": "2026-07-11",
+        "cents": 1240000,
+        "payee": "YARD WORKSPACE RENT",
+        "memo": "July suite",
+        "gold": "exact"
+      },
+      {
+        "id": "L10",
+        "date": "2026-07-12",
+        "cents": 7850,
+        "payee": "PARCEL CO 298441",
+        "memo": "waybill",
+        "gold": "exact"
+      },
+      {
+        "id": "L11",
+        "date": "2026-07-14",
+        "cents": 225000,
+        "payee": "KLINE & ASSOCIATES LLP",
+        "memo": "retainer",
+        "gold": "exact"
+      },
+      {
+        "id": "L12",
+        "date": "2026-07-15",
+        "cents": 32000,
+        "payee": "INKSUITE CLOUD",
+        "memo": "creative seats",
+        "gold": "exact"
+      },
+      {
+        "id": "L13",
+        "date": "2026-07-25",
+        "cents": 44500,
+        "payee": "MAILROOM PRIORITY",
+        "memo": "labels",
+        "gold": "exact"
+      },
+      {
+        "id": "L14",
+        "date": "2026-07-16",
+        "cents": 104500,
+        "payee": "PSP payout Jul",
+        "memo": "processor batch",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L15",
+        "date": "2026-07-17",
+        "cents": 89050,
+        "payee": "Cart Marketplace",
+        "memo": "restock",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L16",
+        "date": "2026-07-18",
+        "cents": 210000,
+        "payee": "CloudCo compute",
+        "memo": "usage July",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L17",
+        "date": "2026-07-08",
+        "cents": 6400,
+        "payee": "Harbor Beans (POS)",
+        "memo": "team coffee",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L18",
+        "date": "2026-07-07",
+        "cents": 315000,
+        "payee": "Vendor settlement — AP",
+        "memo": "Northwind paper",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L19",
+        "date": "2026-07-19",
+        "cents": 100000,
+        "payee": "Northwind Paper",
+        "memo": "INV-4410",
+        "gold": "split"
+      },
+      {
+        "id": "L20",
+        "date": "2026-07-19",
+        "cents": 80000,
+        "payee": "Northwind Paper",
+        "memo": "INV-4411",
+        "gold": "split"
+      },
+      {
+        "id": "L21",
+        "date": "2026-07-20",
+        "cents": 875000,
+        "payee": "Rivera consulting accrual",
+        "memo": "open — do not clear",
+        "gold": "disputed"
+      },
+      {
+        "id": "L22",
+        "date": "2026-07-24",
+        "cents": 21000,
+        "payee": "Accrued postage",
+        "memo": "no bank line yet",
+        "gold": "unmatched"
+      },
+      {
+        "id": "L25",
+        "date": "2026-07-24",
+        "cents": 88000,
+        "payee": "QUAY PRINT LTD",
+        "memo": "INV-5501 press run",
+        "gold": "offset"
+      },
+      {
+        "id": "L26",
+        "date": "2026-07-13",
+        "cents": 1850,
+        "payee": "First Harbor Bank — wire fees",
+        "memo": "July wires",
+        "gold": "fee"
+      },
+      {
+        "id": "L27",
+        "date": "2026-07-28",
+        "cents": 200000,
+        "payee": "PSP payout",
+        "memo": "batch-802 gross",
+        "gold": "fee"
+      },
+      {
+        "id": "L28",
+        "date": "2026-07-29",
+        "cents": 100000,
+        "ccy": "EUR",
+        "payee": "Atelier Nord",
+        "memo": "INV-EU-19",
+        "gold": "fx"
+      },
+      {
+        "id": "L29",
+        "date": "2026-07-21",
+        "cents": 100000,
+        "payee": "Quill & Co",
+        "memo": "INV-900",
+        "gold": "many-one"
+      },
+      {
+        "id": "L31",
+        "date": "2026-07-26",
+        "cents": 72500,
+        "payee": "Northwind Paper",
+        "memo": "INV-4412",
+        "gold": "fuzzy"
+      },
+      {
+        "id": "L32",
+        "date": "2026-07-30",
+        "cents": 50000,
+        "payee": "ACME SUPPLIES INC",
+        "memo": "INV-1099",
+        "gold": "duplicate"
+      },
+      {
+        "id": "L34A",
+        "date": "2026-07-18",
+        "cents": 45000,
+        "payee": "CloudCo storage",
+        "memo": "jul storage",
+        "gold": "ambiguous"
+      },
+      {
+        "id": "L34B",
+        "date": "2026-07-17",
+        "cents": 45000,
+        "payee": "CloudNine backup",
+        "memo": "jul backup",
+        "gold": "ambiguous"
+      },
+      {
+        "id": "L35",
+        "date": "2026-07-31",
+        "cents": 220000,
+        "payee": "Unknown credit accrual",
+        "memo": "open — do not clear",
+        "gold": "disputed"
+      },
+      {
+        "id": "L36",
+        "date": "2026-07-16",
+        "cents": 90000,
+        "payee": "West Wharf Ink",
+        "memo": "INV-220",
+        "gold": "partial"
+      }
+    ]
+  },
+  "baseline": {
+    "posted": [
+      {
+        "bank": "B01",
+        "ledger": [
+          "L01"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B02",
+        "ledger": [
+          "L02"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B03",
+        "ledger": [
+          "L03"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B04",
+        "ledger": [
+          "L04"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B05",
+        "ledger": [
+          "L05"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B06",
+        "ledger": [
+          "L06"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B07",
+        "ledger": [
+          "L07"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B08",
+        "ledger": [
+          "L08"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B09",
+        "ledger": [
+          "L09"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B10",
+        "ledger": [
+          "L10"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B11",
+        "ledger": [
+          "L11"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B12",
+        "ledger": [
+          "L12"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B13",
+        "ledger": [
+          "L13"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B16",
+        "ledger": [
+          "L16"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B17",
+        "ledger": [
+          "L17"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B31",
+        "ledger": [
+          "L31"
+        ],
+        "method": "baseline-exact",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      }
+    ],
+    "suggested": [],
+    "holds": [],
+    "unmatchedB": [
+      "B14",
+      "B15",
+      "B18",
+      "B19",
+      "B20",
+      "B21",
+      "B22",
+      "B23",
+      "B24",
+      "B25",
+      "B26",
+      "B27",
+      "B28",
+      "B29",
+      "B30",
+      "B32",
+      "B33",
+      "B34",
+      "B35",
+      "B36"
+    ],
+    "unmatchedL": [
+      "L14",
+      "L15",
+      "L18",
+      "L19",
+      "L20",
+      "L21",
+      "L22",
+      "L25",
+      "L26",
+      "L27",
+      "L28",
+      "L29",
+      "L32",
+      "L34A",
+      "L34B",
+      "L35",
+      "L36"
+    ]
+  },
+  "candidate": {
+    "posted": [
+      {
+        "bank": "B01",
+        "ledger": [
+          "L01"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B02",
+        "ledger": [
+          "L02"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B03",
+        "ledger": [
+          "L03"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B04",
+        "ledger": [
+          "L04"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B05",
+        "ledger": [
+          "L05"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B06",
+        "ledger": [
+          "L06"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B07",
+        "ledger": [
+          "L07"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B08",
+        "ledger": [
+          "L08"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B09",
+        "ledger": [
+          "L09"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B10",
+        "ledger": [
+          "L10"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B11",
+        "ledger": [
+          "L11"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B12",
+        "ledger": [
+          "L12"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B13",
+        "ledger": [
+          "L13"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B15",
+        "ledger": [
+          "L15"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 0.92,
+        "reason": null
+      },
+      {
+        "bank": "B16",
+        "ledger": [
+          "L16"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B17",
+        "ledger": [
+          "L17"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B18",
+        "ledger": [
+          "L18"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 0.92,
+        "reason": null
+      },
+      {
+        "bank": "B26",
+        "ledger": [
+          "L26"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 0.92,
+        "reason": null
+      },
+      {
+        "bank": "B31",
+        "ledger": [
+          "L31"
+        ],
+        "method": "exact-amount-date",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B25",
+        "ledger": [
+          "L25"
+        ],
+        "method": "date-offset",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      },
+      {
+        "bank": "B32",
+        "ledger": [
+          "L32"
+        ],
+        "method": "fuzzy-payee",
+        "posted": true,
+        "payeeScore": 1,
+        "reason": null
+      }
+    ],
+    "suggested": [
+      {
+        "bank": "B14",
+        "ledger": [
+          "L14"
+        ],
+        "method": "fuzzy-payee",
+        "posted": false,
+        "payeeScore": 0.6133333333333333,
+        "reason": null
+      },
+      {
+        "bank": "B34",
+        "ledger": [
+          "L34A",
+          "L34B"
+        ],
+        "method": "ambiguous",
+        "posted": false,
+        "payeeScore": 0.6133333333333333,
+        "reason": "Ambiguous: two ledger candidates, scores too close. Human pick."
+      },
+      {
+        "bank": "B19",
+        "ledger": [
+          "L19",
+          "L20"
+        ],
+        "method": "one-to-many",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "Split: bank amount = two ledger invoices. Review before post."
+      },
+      {
+        "bank": "B29",
+        "ledger": [
+          "L29"
+        ],
+        "method": "many-to-one",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "Combined: two bank credits = one ledger invoice. Review before post."
+      },
+      {
+        "bank": "B30",
+        "ledger": [
+          "L29"
+        ],
+        "method": "many-to-one",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "Combined: two bank credits = one ledger invoice. Review before post."
+      },
+      {
+        "bank": "B27",
+        "ledger": [
+          "L27"
+        ],
+        "method": "fee-net",
+        "posted": false,
+        "payeeScore": 0.92,
+        "reason": "Fee / commission: amounts differ by 1500¢. Review before post."
+      },
+      {
+        "bank": "B28",
+        "ledger": [
+          "L28"
+        ],
+        "method": "fx",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "FX: USD 108500 vs EUR 100000 — amounts near, not equal. Human rates."
+      },
+      {
+        "bank": "B36",
+        "ledger": [
+          "L36"
+        ],
+        "method": "partial",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "Partial: bank covers part of one ledger invoice. Review before post."
+      },
+      {
+        "bank": "B33",
+        "ledger": [
+          "L32"
+        ],
+        "method": "duplicate",
+        "posted": false,
+        "payeeScore": 1,
+        "reason": "Duplicate bank line of an already-posted pair. Do not double-post."
+      }
+    ],
+    "holds": [
+      {
+        "bank": "B20",
+        "ledger": [
+          "L21"
+        ],
+        "method": "hold-judgment",
+        "posted": false,
+        "payeeScore": 0.46,
+        "reason": "Disputed / unauthorized / fraud — fiduciary hold. Human only."
+      },
+      {
+        "bank": "B35",
+        "ledger": [
+          "L35"
+        ],
+        "method": "hold-judgment",
+        "posted": false,
+        "payeeScore": 0.92,
+        "reason": "Disputed / unauthorized / fraud — fiduciary hold. Human only."
+      }
+    ],
+    "unmatchedB": [
+      "B21",
+      "B22",
+      "B23",
+      "B24"
+    ],
+    "unmatchedL": [
+      "L22"
+    ]
+  },
+  "rubric": {
+    "baseline": {
+      "outcome": "works-with-controls",
+      "readiness": "requires-integration",
+      "why": "Exact precision 1.00. Residual exception 56% — still a human desk. Disputed items were not auto-posted. Not a full ERP replacement.",
+      "gate": "precision-with-exceptions",
+      "numbers": {
+        "bankN": 36,
+        "ledgerN": 33,
+        "exactN": 13,
+        "exactPosted": 13,
+        "exactCorrect": 13,
+        "exactPrecision": 1,
+        "exactRecall": 1,
+        "messyN": 17,
+        "messyTouched": 3,
+        "messyPosted": 3,
+        "fuzzyN": 6,
+        "fuzzyTouched": 3,
+        "fuzzyPosted": 3,
+        "fraudPosted": false,
+        "materialPosted": false,
+        "holdN": 0,
+        "holdsCorrect": 0,
+        "disputedN": 2,
+        "suggestedN": 0,
+        "unmatchedBankN": 20,
+        "unmatchedLedgerN": 17,
+        "postedN": 16,
+        "exceptionRate": 0.5555555555555556,
+        "humanN": 20
+      }
+    },
+    "candidate": {
+      "outcome": "works-with-controls",
+      "readiness": "requires-integration",
+      "why": "Exact precision 1.00. Residual exception 42% — still a human desk. Judgment items held — that is a correct result. Not a full ERP replacement.",
+      "gate": "precision-with-exceptions",
+      "numbers": {
+        "bankN": 36,
+        "ledgerN": 33,
+        "exactN": 13,
+        "exactPosted": 13,
+        "exactCorrect": 13,
+        "exactPrecision": 1,
+        "exactRecall": 1,
+        "messyN": 17,
+        "messyTouched": 17,
+        "messyPosted": 8,
+        "fuzzyN": 6,
+        "fuzzyTouched": 6,
+        "fuzzyPosted": 5,
+        "fraudPosted": false,
+        "materialPosted": false,
+        "holdN": 2,
+        "holdsCorrect": 2,
+        "disputedN": 2,
+        "suggestedN": 9,
+        "unmatchedBankN": 4,
+        "unmatchedLedgerN": 1,
+        "postedN": 21,
+        "exceptionRate": 0.4166666666666667,
+        "humanN": 15
+      }
+    },
+    "delta": {
+      "posted": 5,
+      "suggested": 9,
+      "hold": 2,
+      "messyTouched": 14,
+      "exceptionRate": -0.1388888888888889,
+      "exactPosted": 0,
+      "note": "Straight-through recon (amount + date + exact ref) has existed for 20 years. The delta is the product."
+    }
+  }
+}
