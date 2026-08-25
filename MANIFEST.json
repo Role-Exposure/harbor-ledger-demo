@@ -4,7 +4,7 @@
   "surface": "P01-PUBLIC",
   "candidate": "deterministic rules matcher (matcher.js, match()), 19 August bytes, no reason codes",
   "baseline": "deterministic rules baseline (amount, date, exact reference)",
-  "as_of": "2026-08-25T02:55:15Z",
+  "as_of": "2026-08-25T03:00:38Z",
   "files": [
     {
       "file": "run.mjs",
@@ -25,6 +25,10 @@
     {
       "file": "runs/2026-08-19-self-asserted.json",
       "sha256": "7d13b03c6e2a32730e661f0a245cb2e042855eb22bd21ba5f96b9c5a38af0ce1"
+    },
+    {
+      "file": "runs/v1-harbor-ledger.json",
+      "sha256": "f606146afd219bd92c72b8dafc61ea2670f7d558ae4d11c1d5e5501c4b516f19"
     }
   ]
 }
