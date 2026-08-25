@@ -27,7 +27,7 @@ threshold, and the identity and version of the grader.
 | Grader | `rubric.js` | 9acd3d1239ab59cf8ac153936883bfb4e852258cf92e97e2d3df7616f175dc35 |
 | Fixture | `data.js` | d4e95579cd0b896d5bc637705d12a871ee93bf7e66dd18a06f51cb269f3198e1 |
 | Earlier run record | `runs/2026-08-19-self-asserted.json` | 7d13b03c6e2a32730e661f0a245cb2e042855eb22bd21ba5f96b9c5a38af0ce1 |
-| Reference list vintage | *[list name and dated edition]* | n/a |
+| Reference list vintage | None. No network, no API, no external file. The two small in-code dictionaries (payee stop-words, payee aliases) are part of the frozen matcher.js bytes. | n/a |
 | Coverage threshold | Not applicable. This pack produces a task-level cell, not a role score. | n/a |
 
 Truncated digests are not verifiable. Publish the full values.
