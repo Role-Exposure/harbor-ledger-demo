@@ -4,7 +4,7 @@
   "surface": "P01-PUBLIC",
   "candidate": "deterministic rules matcher (matcher.js, match()), 19 August bytes, no reason codes",
   "baseline": "deterministic rules baseline (amount, date, exact reference)",
-  "as_of": "2026-08-25T01:47:20Z",
+  "as_of": "2026-08-25T02:55:15Z",
   "files": [
     {
       "file": "run.mjs",
